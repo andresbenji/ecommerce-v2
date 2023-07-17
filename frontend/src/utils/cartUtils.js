@@ -8,12 +8,12 @@ export const addDecimals = (num) => {
         state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
       );
 
-      //Calculate shipping price (If order is over $100 then free, else $10 shipping)
-      state.shippingPrice = addDecimals(state.itemsPrice > 1000 ? 0 : 10);
+      //Calculate shipping price (If order is over $1000 then free, else $25 shipping)
+      state.shippingPrice = addDecimals(state.itemsPrice > 1000 ? 0 : 25);
 
       //Calculate tax price
       state.taxPrice = addDecimals(
-        Number((0.15 * state.itemsPrice).toFixed(2))
+        Number((0.8 * state.itemsPrice).toFixed(2))
       );
 
       //Calculate total price
