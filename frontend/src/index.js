@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import {
   PayPalScriptProvider,
-  PaypalScriptProvider,
 } from "@paypal/react-paypal-js";
 import { Provider } from "react-redux";
 import store from "./store.js";
@@ -19,6 +18,7 @@ import App from "./App";
 import HomeScreen from "./screens/HomeScreen.jsx";
 import ProductScreen from "./screens/ProductScreen.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
+import AdminRoute from './components/AdminRoute.jsx'
 import CartScreen from "./screens/CartScreen.jsx";
 import LoginScreen from "./screens/LoginScreen.jsx";
 import RegisterScreen from "./screens/RegisterScreen.jsx";
@@ -26,12 +26,15 @@ import ShippingScreen from "./screens/ShippingScreen.jsx";
 import PaymentScreen from "./screens/PaymentScreen.jsx";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen.jsx";
 import OrderScreen from "./screens/OrderScreen.jsx";
+import ProfileScreen from "./screens/ProfileScreen.jsx";
+import OrderListScreen from "./screens/admin/OrderListScreen.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     //embedding the App component into the path '/'
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
+      <Route path="/page/:pageNumber" element={<HomeScreen />} />
       <Route path="/product/:id" element={<ProductScreen />} />
       <Route path="/cart" element={<CartScreen />} />
       <Route path="/login" element={<LoginScreen />} />
@@ -42,7 +45,15 @@ const router = createBrowserRouter(
         <Route path="/payment" element={<PaymentScreen />} />
         <Route path="/placeorder" element={<PlaceOrderScreen />} />
         <Route path="/order/:id" element={<OrderScreen />} />
+        <Route path="/profile" element={<ProfileScreen />} />
       </Route>
+       {/* ADMIN ROUTES */}
+       <Route path="" element={<AdminRoute />}>
+        <Route path="/admin/orderlist" element={<OrderListScreen />} />
+       
+      </Route>
+
+
     </Route>
   )
 );

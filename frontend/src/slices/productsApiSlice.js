@@ -7,8 +7,11 @@ export const productsApiSlice = apiSlice.injectEndpoints({
     
     //this endpoint fetches all of our products
     getProducts: builder.query({
-      query: () => ({
+      query: ({pageNumber}) => ({
         url: PRODUCTS_URL,
+        params: {
+          pageNumber,
+        }
       }),
       keepUnusedDataFor: 5,
     }),
