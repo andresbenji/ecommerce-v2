@@ -71,6 +71,81 @@ const products = [
     rating: 4,
     numReviews: 12,
   },
+  {
+    name: "Variant Radon Titanium Brushed Wheels",
+    image: "/images/wheel2.jpg",
+    description:
+      " The Radon features a complex sporty spoke design inspired by the popularity of our FCK-3P a fully forged product in our sixty61 series. This signature wheel has received a ton of interest and is now more obtainable than ever. Due to the utilization of our Cold Vertical Forging technology and our in-house CNC machining center, the Radon is available for most five-lug bolt patterns and offered in a wide range of offset configurations",
+    brand: "Variant",
+    category: "Wheels",
+    price: 524.0,
+    countInStock: 25,
+    rating: 3.5,
+    numReviews: 23,
+  },
+  {
+    name: "PURE B48 Upgrade Turbo",
+    image: "/images/turbo2.jpg",
+    description:
+      " Please note: PURE products have an estimated 4-8 week lead time. PURE Custom Billet Compressor Wheel. Hi-Flow Larger Turbine Wheel. Upgraded Thrust System. CNC Machined. VSR Balanced",
+    brand: "Pure Turbos",
+    category: "Turbos",
+    price: 2500.0,
+    countInStock: 3,
+    rating: 5,
+    numReviews: 10,
+  },
+  {
+    name: "AWE EXHAUST SUITE FOR THE BMW G8X M3/M4",
+    image: "/images/exhaust2.jpg",
+    description:
+      " 50-state emissions-complaint dual 3” exhaust configuration. Available as valved SwitchPath™ or rowdy Track Edition. AWE's first SwitchPath™ exhaust for BMW to incorporate drone-canceling 180 Technology®. SwitchPath™ retains factory valve controls, no additional remote needed. Optional non-resonated performance mid-pipes available separately (for AWE Exhausts only). Bespoke X-pipe unlocks a smooth tone out of the S58. Max gains of 3 hp and 5 lb-ft of torque at the wheels",
+    brand: "AWE Tuning",
+    category: "Exhausts",
+    price: 1995.0,
+    countInStock: 7,
+    rating: 3,
+    numReviews: 7,
+  },
+  {
+    name: "BBS Unlimited CI-R 20x11 ET52.5 (Face 3) Gloss Diamond Black Wheel",
+    image: "/images/wheel3.jpg",
+    description:
+      " BBS Unlimited CI-R 20x11 ET52.5 (Face 3) Gloss Diamond Black Wheel",
+    brand: "BBS",
+    category: "Wheels",
+    price: 890.0,
+    countInStock: 4,
+    rating: 5,
+    numReviews: 17,
+  },
+  {
+    name: "AWE Tuning 2020+ Toyota GR Supra S-FLO Carbon Intake",
+    image: "/images/intake2.jpg",
+    description:
+      " Max gains of 15 hp and 21 lb-ft of torque at the wheels (stage 1 software). 71% increase in filter surface area over stock. 4.5”diameter filter outlet. S-FLO Filter with inverted cone design for increased flow. S-FLO filter is washable and oil-less. Designed, engineered, and tested in-house at AWE. Bespoke CNC laser-cut aluminum support bracket included. Intoxicating turbo spool",
+    brand: "AWE Tuning",
+    category: "Intakes",
+    price: 429.0,
+    countInStock: 5,
+    rating: 5,
+    numReviews: 22,
+  },
+  {
+    name: "KW Coilover Kit V3 BMW M340i XDrive G20 W/ Electronic Dampers",
+    image: "/images/coilover1.jpg",
+    description:
+      " Cutting-edge motorsports technology -or more performance on the road. Like every suspension product developed by KW automotive and manufactured in Germany, the KW Variant 3 Coilover suspension kit also provides a significant improvment on the road. Thanks to the high-quality dampers, springs, and elastomer spring elements, pitching and rolling movements during load changes such as evasive maneuvers, cornering, acceleration, and braking are significantly reduced. The braking distances are also shortened. Thanks to improved support and feedback, drivers not only feel more confident but driving in everyday life is improved. ",
+    brand: "KW",
+    category: "Coilovers",
+    price: 3314.0,
+    countInStock: 4,
+    rating: 5,
+    numReviews: 33,
+  },
+  
+
+
 ];
 
 export default products;
