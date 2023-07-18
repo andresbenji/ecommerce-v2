@@ -5,11 +5,15 @@ const featured = [
     },
     {
         name: "car2",
-        image: "/images/car2.jpg"
+        image: "/images/car4.jpg"
     },
     {
         name: "car3",
-        image: "/images/car3.jpg"
+        image: "/images/car3.jpeg"
+    },
+    {
+        name:"car4",
+        image: "/images/car5.jpg"
     }
 ]
 

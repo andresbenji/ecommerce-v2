@@ -28,5 +28,10 @@ background: black;
 
 .carousel{
     margin-bottom: 2rem;
+   
+}
+
+.carouselImg {
     border-radius: 5%;
+    
 }
