@@ -33,7 +33,7 @@ const ProfileScreen = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      toString.error("Password do not match");
+      toast.error("Password do not match");
     } else {
       try {
         const res = await updateProfile({

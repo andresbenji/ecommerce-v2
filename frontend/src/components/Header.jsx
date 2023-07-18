@@ -39,7 +39,7 @@ const Header = () => {
                 alt="Midnight Club Auto Parts"
                 style={{ width: 42 }}
               />
-              Midnight Club Imports
+              Midnight Club Auto Parts
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
 import Loader from "../components/Loader";
+import Meta from "../components/Meta";
 import { useGetProductsQuery } from "../slices/productsApiSlice";
 import Message from "../components/Message";
 import Paginate from "../components/Paginate";
+import FeaturedCarousel from "../components/FeaturedCarousel";
 
 const HomeScreen = () => {
   const { pageNumber } = useParams();
@@ -14,6 +16,7 @@ const HomeScreen = () => {
 
   return (
     <>
+    <FeaturedCarousel/>
       {isLoading ? (
         <h2>
           <Loader />
@@ -22,6 +25,7 @@ const HomeScreen = () => {
         <Message variant="danger">{error.data.message || error.error}</Message>
       ) : (
         <>
+        <Meta/>
           <h1>Latest Products</h1>
           <Row>
             {/* maps through each product in product.js and outputs a new column */}

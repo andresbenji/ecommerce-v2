@@ -2,11 +2,13 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import color from "colors";
 import users from "./data/users.js";
+import featured from "./data/featured.js";
 import products from "./data/products.js";
 import User from "./models/userModel.js";
 import Product from "./models/productModel.js";
 import Order from "./models/orderModel.js";
 import connectDB from "./config/db.js";
+import Featured from "./models/featuredModels.js";
 
 //accessing environment variables
 dotenv.config();
@@ -19,6 +21,7 @@ const importData = async () => {
     await Order.deleteMany();
     await Product.deleteMany();
     await User.deleteMany();
+    await Featured.deleteMany();
 
     const createdUsers = await User.insertMany(users);
 
@@ -27,8 +30,12 @@ const importData = async () => {
     const sampleProducts = products.map((product) => {
       return { ...product, user: adminUser };
     });
+    const featuredCars = featured.map((car) => {
+      return { ...car, user: adminUser };
+    });
 
     await Product.insertMany(sampleProducts);
+    await Featured.insertMany(featuredCars);
 
     console.log("Data imported!".green.inverse);
     process.exit();

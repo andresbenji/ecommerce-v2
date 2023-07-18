@@ -22,8 +22,9 @@ export const productsApiSlice = apiSlice.injectEndpoints({
             url: `${PRODUCTS_URL}/${productId}`
         }),
         keepUnusedData: 5
-    })
+    }),
+    
   }),
 });
 
-export const { useGetProductsQuery , useGetProductDetailsQuery } = productsApiSlice;
+export const { useGetProductsQuery , useGetProductDetailsQuery} = productsApiSlice;
