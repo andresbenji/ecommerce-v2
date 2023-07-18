@@ -2,7 +2,7 @@ import { Carousel, Image } from "react-bootstrap";
 import Loader from "./Loader";
 import Message from "./Message";
 import { useGetFeaturedQuery } from "../slices/featuredApiSlice.js";
-
+import styles from '../assets/styles/custom.module.css'
 import React from "react";
 
 const FeaturedCarousel = () => {
@@ -14,11 +14,11 @@ const FeaturedCarousel = () => {
     <Message variant="danger">{error}</Message>
   ) : (
     <>
-      <h2>Featured Cars</h2>
-      <Carousel pause="hover" className="bg-primary mb-4" fade dealy={2000}>
+      <h1>Featured Cars</h1>
+      <Carousel pause="hover" className={styles.carousel} fade delay={2000}>
         {featured.map((car) => (
           <Carousel.Item key={car._id}>
-            <Image src={car.image} alt={car.name} c fluid />
+            <Image className={styles.img}src={car.image} alt={car.name} fluid />
           </Carousel.Item>
         ))}
       </Carousel>

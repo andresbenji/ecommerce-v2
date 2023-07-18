@@ -18,6 +18,7 @@ import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { useGetProductDetailsQuery } from "../slices/productsApiSlice";
 import { addToCart } from "../slices/cartSlice";
+import styles from '../assets/styles/custom.module.css'
 
 const ProductScreen = () => {
   //gets the ID from the current URL
@@ -52,26 +53,26 @@ const ProductScreen = () => {
       ) : error ? (
         <Message variant="danger">{error.data.message || error.error}</Message>
       ) : (
-        <Row>
+        <Row >
           <Col md={5}>
-            <Image src={product.image} alt={product.name} fluid />
+            <Image className={styles.img}src={product.image} alt={product.name} fluid />
           </Col>
 
           <Col md={4}>
-            <ListGroup variant="flush">
-              <ListGroupItem>
+            <ListGroup variant="flush rounded">
+              <ListGroup.Item >
                 <h3>{product.name}</h3>
-              </ListGroupItem>
+              </ListGroup.Item>
 
-              <ListGroupItem>
+              <ListGroup.Item>
                 <Rating
                   value={product.rating}
                   text={`${product.numReviews} reviews`}
                 />
-              </ListGroupItem>
+              </ListGroup.Item>
 
-              <ListGroupItem>Price: ${product.price}</ListGroupItem>
-              <ListGroupItem>Description: {product.description}</ListGroupItem>
+              <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+              <ListGroup.Item>Description: {product.description}</ListGroup.Item>
             </ListGroup>
           </Col>
 

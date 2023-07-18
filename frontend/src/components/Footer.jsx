@@ -1,11 +1,12 @@
 import{Container, Row, Col} from "react-bootstrap"
 import React from 'react'
+import styles from '../assets/styles/custom.module.css'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   
     return (
-    <footer>
+    <footer className={styles.bgColor}>
       <Container>
         <Row>
             <Col className="text-center py-3">

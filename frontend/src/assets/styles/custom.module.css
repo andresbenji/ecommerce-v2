@@ -1,3 +1,32 @@
-.productImg {
-  height: 12rem;
+body{
+    color:white;
+}
+h1{
+  color: white;
+}
+
+.bgColor {
+    background-color: black
+    
+}
+
+.card{
+    background: rgba(0,0,0,0.7);
+    padding: 3px;
+    margin:3px;
+    border-radius: 5%;
+}
+
+.card:hover{
+background: black;
+}
+
+.img {
+    filter:brightness(80%);
+    border-radius: 5%;
+}
+
+.carousel{
+    margin-bottom: 2rem;
+    border-radius: 5%;
 }

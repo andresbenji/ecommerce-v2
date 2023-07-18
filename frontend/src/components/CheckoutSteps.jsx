@@ -4,44 +4,44 @@ import { LinkContainer } from "react-router-bootstrap";
 
 const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   return (
-    <Nav className="justify-content-center mb-4">
+    <Nav className="justify-content-center mb-4" >
       <Nav.Item>
         {step1 ? (
-          <LinkContainer to="/login">
+          <LinkContainer style={{color:'white'}} to="/login">
             <Nav.Link>Sign In</Nav.Link>
           </LinkContainer>
         ) : (
-          <Nav.Link disabled>Sign in</Nav.Link>
+          <Nav.Link disabled style={{color:'red'}}>Sign in</Nav.Link>
         )}
       </Nav.Item>
 
       <Nav.Item>
         {step2 ? (
-          <LinkContainer to="/shipping">
+          <LinkContainer style={{color:'white'}} to="/shipping">
             <Nav.Link>Shipping</Nav.Link>
           </LinkContainer>
         ) : (
-          <Nav.Link disabled>Shipping</Nav.Link>
+          <Nav.Link disabled style={{color:'red'}}>Shipping</Nav.Link>
         )}
       </Nav.Item>
 
       <Nav.Item>
         {step3 ? (
-          <LinkContainer to="/payment">
+          <LinkContainer style={{color:'white'}} to="/payment">
             <Nav.Link>Payment</Nav.Link>
           </LinkContainer>
         ) : (
-          <Nav.Link disabled>Payment</Nav.Link>
+          <Nav.Link disabled style={{color:'red'}}>Payment</Nav.Link>
         )}
       </Nav.Item>
 
       <Nav.Item>
         {step4 ? (
-          <LinkContainer to="/placeorder">
+          <LinkContainer style={{color:'white'}} to="/placeorder">
             <Nav.Link>Place Order</Nav.Link>
           </LinkContainer>
         ) : (
-          <Nav.Link disabled>Place Order</Nav.Link>
+          <Nav.Link disabled style={{color:'red'}}>Place Order</Nav.Link>
         )}
       </Nav.Item>
     </Nav>

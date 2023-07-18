@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useLogoutMutation } from "../slices/usersApiSlice";
 import { logout } from "../slices/authSlice";
 import logo from "../assets/workHard.jpg";
+import styles from '../assets/styles/custom.module.css'
 
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -28,16 +29,16 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
-        <Container>
+    <header >
+      <Navbar  variant="dark" expand="md" collapseOnSelect className={styles.bgColor}>
+        <Container >
           {/* sub-component for navbar */}
           <LinkContainer to="/">
             <Navbar.Brand>
               <img
                 src={logo}
                 alt="Midnight Club Auto Parts"
-                style={{ width: 42 }}
+                style={{ marginRight:10, width: 42, filter: 'brightness(10000%)' }}
               />
               Midnight Club Auto Parts
             </Navbar.Brand>
