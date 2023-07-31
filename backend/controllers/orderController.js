@@ -41,7 +41,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
   }
 });
 
-//@desc  GET LOGGEND IN USER ORDERS
+//@desc  GET LOGGED IN USER ORDERS
 //@route GET /api/orders/myorders
 //@access Private
 const getMyOrders = asyncHandler(async (req, res) => {

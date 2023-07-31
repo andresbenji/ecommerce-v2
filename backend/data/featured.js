@@ -9,7 +9,7 @@ const featured = [
     },
     {
         name: "car3",
-        image: "/images/car3.jpeg"
+        image: "/images/car7.jpg"
     },
     {
         name:"car4",
