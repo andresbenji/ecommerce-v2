@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
+    "cypress": "^12.17.2",
     "dotenv": "^16.3.1",
     "nodemon": "^3.0.1"
   }
